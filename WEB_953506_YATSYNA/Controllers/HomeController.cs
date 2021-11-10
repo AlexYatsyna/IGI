@@ -37,7 +37,7 @@ namespace WEB_953506_YATSYNA.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Text"] = "Лабораторная работа 6";
+            ViewData["Text"] = "Лабораторная работа 7";
             ViewData["Lst"] =new SelectList(_listDemo, "ListItemValue", "ListItemText");
             return View();
         }

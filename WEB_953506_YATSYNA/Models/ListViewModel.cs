@@ -10,9 +10,7 @@ namespace WEB_953506_YATSYNA.Models
         public int TotalPages { get; set; }
         public int CurrentPage { get; set; }
 
-        private ListViewModel(IEnumerable<T> items,
-        int total,
-        int current) : base(items)
+        private ListViewModel(IEnumerable<T> items, int total, int current) : base(items)
         {
             TotalPages = total;
             CurrentPage = current;

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,15 @@ namespace WEB_953506_YATSYNA.Controllers
     public class ProductController : Controller
     {
         ApplicationDbContext _context;
+
         int _pageSize;
 
-        public ProductController(ApplicationDbContext context)
+        private ILogger _logger;
+        public ProductController(ApplicationDbContext context, ILogger<ProductController> logger)
         {
             _pageSize = 3;
             _context = context;
+            _logger = logger;
         }
 
        
