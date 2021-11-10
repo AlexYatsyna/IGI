@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WEB_953506_YATSYNA
+namespace WEB_953506_YATSYNA.Blazor.Server
 {
     public class Program
     {
@@ -17,15 +17,10 @@ namespace WEB_953506_YATSYNA
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(webBuilder =>
-        {
-            webBuilder.UseStartup<Startup>();
-        })
-        .ConfigureLogging(lp =>
-        {
-            lp.AddFilter("Microsoft", LogLevel.Error);
-            lp.AddFilter("Microsoft.Hosting.Lifetime", LogLevel.None);
-        });
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }
